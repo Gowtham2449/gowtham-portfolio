@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gowtham K | AI/ML Engineer & Data Analyst | B.Tech Portfolio</title>
+  <meta name="description" content="Portfolio of Gowtham K — Final year B.Tech (AI & DS) at CARE College Of Engineering (CGPA: 7.81). AI/ML Engineer and Data Analyst with internships at Greensoft and NoviTech.">
+  <meta name="keywords" content="Gowtham K, AI/ML Engineer, Data Analyst, Deepfake Audio Detection, Railway Track Crack Detection, Ground Water Monitoring, Greensoft, NoviTech, CARE College Of Engineering">
+  <meta name="author" content="Gowtham K">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gowtham K — AI/ML Engineer & Data Analyst">
+  <meta property="og:description" content="Final year B.Tech (AI & DS) student at CARE College Of Engineering (CGPA: 7.81). Explore my AI/ML projects, data analytics systems, internships, and resume.">
+  <meta property="og:image" content="assets/images/gowtham.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo" aria-label="Gowtham K Home">
+        <span class="logo-icon">&lt;GK/&gt;</span>
+        <span class="logo-text">Gowtham<span class="gradient-text">.ai</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="#education" class="nav-link" id="nav-education">Education</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+          <li><a href="#internships" class="nav-link" id="nav-internships">Internships</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA Actions -->
+      <div class="nav-actions">
+        <a href="https://drive.google.com/file/d/13wb3r4-I0Joc9GC5KEAwquSjTatTlAp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm resume-btn" id="drive-resume-nav-btn" aria-label="Open Resume on Google Drive">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Resume (Drive)</span>
+        </a>
+
+        <button class="btn btn-glass btn-sm" id="open-resume-btn" aria-label="Open Interactive Resume Modal">
+          <span>Preview</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm hire-btn" id="nav-hire-btn">
+          <span>Let's Talk</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#internships" class="mobile-nav-link">Internships</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-drawer-cta">
+          <a href="https://drive.google.com/file/d/13wb3r4-I0Joc9GC5KEAwquSjTatTlAp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full" id="mobile-drive-resume-btn">Open Resume (Drive)</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="availability-badge" id="availability-badge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">Final Year B.Tech (AI & DS) &bull; CGPA: 7.81 &bull; Open for Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text hero-name">Gowtham K</span><br>
+            <span class="typed-wrapper">
+              <span class="typed-text" id="typed-text">AI/ML Engineer & Data Analyst</span>
+              <span class="typed-cursor">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Final year B.Tech (Artificial Intelligence & Data Science) student at <strong>CARE College Of Engineering</strong> (CGPA: <strong>7.81</strong>). Specializing in <strong>AI/ML Engineering</strong>, <strong>Data Analytics</strong>, <strong>Python</strong>, <strong>SQL</strong>, and <strong>Frontend Development</strong> with industry internships at Greensoft & NoviTech.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg" id="hero-projects-btn">
+              <span>Explore My Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="https://drive.google.com/file/d/13wb3r4-I0Joc9GC5KEAwquSjTatTlAp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg" id="hero-drive-resume-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links-bar" id="hero-social-links">
+            <a href="https://github.com/Gowtham2449/Gowtham2449" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/gowtham-k-6871493b6" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="tel:+919788072449" class="social-icon-btn" aria-label="Call Mobile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+            <a href="mailto:kgowtham1407@gmail.com" class="social-icon-btn" aria-label="Send Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <div class="social-separator"></div>
+            <span class="social-tag">+91 9788072449</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase Card -->
+        <div class="hero-visual">
+          <div class="profile-card-glass">
+            <div class="profile-card-ambient"></div>
+            
+            <div class="avatar-wrapper">
+              <img src="assets/images/gowtham.jpg" alt="Gowtham K - AI/ML Engineer & Data Analyst" class="avatar-img" width="280" height="280">
+              <div class="avatar-ring"></div>
+              <div class="avatar-status-pill">
+                <span class="status-online-dot"></span>
+                <span>Open for Work</span>
+              </div>
+            </div>
+
+            <div class="profile-meta">
+              <h3 class="profile-name">Gowtham K</h3>
+              <p class="profile-subtitle">AI/ML Engineer &bull; Data Analyst &bull; B.Tech (AI & DS)</p>
+              
+              <!-- Floating Mini Metrics -->
+              <div class="mini-metrics-grid">
+                <div class="metric-pill">
+                  <span class="metric-val">7.81</span>
+                  <span class="metric-lbl">CGPA</span>
+                </div>
+                <div class="metric-pill">
+                  <span class="metric-val">3</span>
+                  <span class="metric-lbl">AI & IoT Projects</span>
+                </div>
+                <div class="metric-pill">
+                  <span class="metric-val">2</span>
+                  <span class="metric-lbl">Internships</span>
+                </div>
+              </div>
+
+              <!-- Tech Stack Quick Tagline -->
+              <div class="profile-tech-strip">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">Data Analytics</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Frontend Dev</span>
+              </div>
+            </div>
+
+            <!-- Terminal Snippet Widget -->
+            <div class="terminal-preview">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="term-title">gowtham@aiml-analyst:~</span>
+              </div>
+              <pre class="terminal-code"><code><span class="token-kw">const</span> profile = {
+  name: <span class="token-str">"Gowtham K"</span>,
+  roles: [<span class="token-str">"AI/ML Engineer"</span>, <span class="token-str">"Data Analyst"</span>],
+  cgpa: <span class="token-str">"7.81"</span>,
+  internships: [<span class="token-str">"Greensoft"</span>, <span class="token-str">"NoviTech"</span>]
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Counter Ribbon -->
+      <div class="stats-ribbon">
+        <div class="container ribbon-inner">
+          <div class="stat-item">
+            <span class="stat-number gradient-text" id="stat-cgpa">7.81</span>
+            <span class="stat-label">Academic CGPA</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number gradient-text" id="stat-projects">3</span>
+            <span class="stat-label">Core Engineering Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number gradient-text" id="stat-internships">2</span>
+            <span class="stat-label">Industry Internships</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number gradient-text">CARE</span>
+            <span class="stat-label">College Of Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PROFILE & PASSION</span>
+          <h2 class="section-title">Solving Complex Problems with <span class="gradient-text">AI/ML & Data Analytics</span></h2>
+          <p class="section-desc">A snapshot of my dual strength in machine learning innovation and practical data-driven web development.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-card glass-panel">
+            <h3 class="about-lead">Hello! I am Gowtham K, an aspiring AI/ML Engineer and Data Analyst.</h3>
+            <p>
+              Currently completing my final year of <strong>B.Tech in Artificial Intelligence & Data Science</strong> at <strong>CARE College Of Engineering</strong> with a <strong>7.81 CGPA</strong>. I combine rigorous machine learning modeling with practical industry experience from internships in Web Development at <strong>Greensoft Company</strong> and Full Stack Development at <strong>NoviTech</strong>.
+            </p>
+            <p>
+              My work spans from acoustic audio deepfake detection to intelligent computer vision for railway safety and environmental IoT groundwater monitoring. I am passionate about turning messy datasets into predictive analytics and clean, accessible dashboards.
+            </p>
+            <div class="about-highlights-list">
+              <div class="highlight-item">
+                <div class="highlight-icon">🧠</div>
+                <div>
+                  <strong>AI/ML & Deepfake Audio Research:</strong> Developed a Room Impulse Response (RIR) spatial acoustic analysis pipeline to detect synthesized speech and protect against voice cloning attacks.
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">📊</div>
+                <div>
+                  <strong>Data Analytics & SQL:</strong> Extracting statistical insights, trend patterns, and structured data intelligence using Python, Pandas, NumPy, and SQL databases.
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🚀</div>
+                <div>
+                  <strong>Industry Internship Experience:</strong> Built responsive web interfaces at Greensoft and full-stack integration workflows at NoviTech.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-side-cards">
+            <!-- Academic Highlights Card -->
+            <div class="glass-panel info-card">
+              <div class="info-card-header">
+                <div class="info-icon">🎓</div>
+                <div>
+                  <h4 class="info-title">Academic & Role Details</h4>
+                  <span class="info-sub">CARE College Of Engineering</span>
+                </div>
+              </div>
+              <ul class="fancy-check-list">
+                <li><strong>Degree:</strong> B.Tech in Artificial Intelligence & Data Science</li>
+                <li><strong>CGPA:</strong> 7.81 / 10</li>
+                <li><strong>Target Roles:</strong> AI/ML Engineer & Data Analyst</li>
+                <li><strong>Mobile:</strong> +91 9788072449</li>
+                <li><strong>Internships:</strong> Greensoft Company & NoviTech</li>
+              </ul>
+            </div>
+
+            <!-- Focus Areas Card -->
+            <div class="glass-panel info-card">
+              <div class="info-card-header">
+                <div class="info-icon">⚡</div>
+                <div>
+                  <h4 class="info-title">Core Disciplines</h4>
+                  <span class="info-sub">Technical Domains</span>
+                </div>
+              </div>
+              <div class="tag-cloud">
+                <span class="tag-pill active">AI / Machine Learning</span>
+                <span class="tag-pill active">Data Analytics</span>
+                <span class="tag-pill active">Deepfake Audio Detection</span>
+                <span class="tag-pill active">Railway Crack Inspection</span>
+                <span class="tag-pill active">Ground Water IoT Analytics</span>
+                <span class="tag-pill active">Python & Librosa</span>
+                <span class="tag-pill active">SQL & Relational DBs</span>
+                <span class="tag-pill active">Frontend Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Credentials</span></h2>
+          <p class="section-desc">My academic foundation at CARE College Of Engineering.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Main Degree Card -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-top">
+                <div>
+                  <span class="timeline-badge">Final Year Undergraduate</span>
+                  <h3 class="degree-title">Bachelor of Technology (B.Tech)</h3>
+                  <h4 class="degree-sub" style="color: var(--accent-cyan); font-weight: 700; margin-top: 0.25rem;">Artificial Intelligence & Data Science (AI & DS)</h4>
+                  <p class="institution-name">CARE College Of Engineering &bull; Expected May 2026</p>
+                </div>
+                <div class="gpa-badge">
+                  <span class="gpa-score">7.81</span>
+                  <span class="gpa-label">Cumulative CGPA</span>
+                </div>
+              </div>
+
+              <p class="timeline-description">
+                Rigorous training across Artificial Intelligence, Neural Networks, Speech & Audio Signal Processing, Data Analytics, Relational Database Systems (SQL), and Object-Oriented Software Design.
+              </p>
+
+              <div class="courses-section">
+                <h4 class="subheading">Key Relevant Coursework:</h4>
+                <div class="course-chips">
+                  <span class="course-chip"><span class="code">AI 401</span> Artificial Intelligence & ML Foundations</span>
+                  <span class="course-chip"><span class="code">DA 302</span> Data Analytics & Predictive Modeling</span>
+                  <span class="course-chip"><span class="code">CS 204</span> Database Management Systems (SQL)</span>
+                  <span class="course-chip"><span class="code">DSP 410</span> Speech & Audio Acoustic Processing</span>
+                  <span class="course-chip"><span class="code">CV 315</span> Computer Vision & Pattern Recognition</span>
+                  <span class="course-chip"><span class="code">WEB 210</span> Modern Frontend & Web Technologies</span>
+                  <span class="course-chip"><span class="code">CS 201</span> Data Structures & Algorithms (Python)</span>
+                </div>
+              </div>
+
+              <div class="timeline-footer">
+                <span class="footer-highlight">🏆 Academic CGPA: 7.81 / 10 &bull; Focus: AI/ML Engineering & Data Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TECHNICAL ARSENAL</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-desc">My technical toolkit spanning Python, Machine Learning, Data Analytics, SQL, and Frontend web development.</p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="filter-tabs-wrapper" id="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="ai">AI / ML & DSP</button>
+          <button class="filter-btn" data-filter="analytics">Data Analytics & SQL</button>
+          <button class="filter-btn" data-filter="frontend">Frontend & Web</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- Skill: Python -->
+          <div class="skill-card glass-panel" data-category="ai">
+            <div class="skill-top">
+              <div class="skill-icon-box lang-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2v-2zm0-10h2v8h-2V6z"/></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-level-text">Core Language &bull; Advanced</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 92%;"></div>
+            </div>
+            <p class="skill-desc">NumPy, Pandas, Matplotlib, Scikit-learn, Librosa, data wrangling, algorithmic pipelines.</p>
+          </div>
+
+          <!-- Skill: AI / ML Modeling -->
+          <div class="skill-card glass-panel" data-category="ai">
+            <div class="skill-top">
+              <div class="skill-icon-box concept-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5h-2v-2h2zm0-4.5h-2V7h2z"/></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">Machine Learning (AI/ML)</h4>
+                <span class="skill-level-text">Classification, Regression, Audio DSP</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 88%;"></div>
+            </div>
+            <p class="skill-desc">Supervised learning, deepfake audio detection, computer vision inspection, feature engineering.</p>
+          </div>
+
+          <!-- Skill: Data Analytics & SQL -->
+          <div class="skill-card glass-panel" data-category="analytics">
+            <div class="skill-top">
+              <div class="skill-icon-box back-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4z"/></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">SQL & Data Analytics</h4>
+                <span class="skill-level-text">Relational Databases & Insights</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 89%;"></div>
+            </div>
+            <p class="skill-desc">Complex query writing, multi-table JOINs, aggregation pipelines, schema normalization, trend analysis.</p>
+          </div>
+
+          <!-- Skill: Frontend Developer -->
+          <div class="skill-card glass-panel" data-category="frontend">
+            <div class="skill-top">
+              <div class="skill-icon-box front-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">Frontend Web Development</h4>
+                <span class="skill-level-text">HTML5, CSS3, JavaScript (ES6+)</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 86%;"></div>
+            </div>
+            <p class="skill-desc">Modern responsive UI, Flexbox, CSS Grid, Glassmorphic design, DOM manipulation, interactive charts.</p>
+          </div>
+
+          <!-- Skill: Acoustic DSP & RIR -->
+          <div class="skill-card glass-panel" data-category="ai">
+            <div class="skill-top">
+              <div class="skill-icon-box tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5 10a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2z"/></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">Room Impulse Response (RIR) Analysis</h4>
+                <span class="skill-level-text">Specialized Audio Research</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 90%;"></div>
+            </div>
+            <p class="skill-desc">Spatial acoustics, reverberation decay, audio spectrogram analysis, voice cloning forensics.</p>
+          </div>
+
+          <!-- Skill: Git & Version Control -->
+          <div class="skill-card glass-panel" data-category="analytics">
+            <div class="skill-top">
+              <div class="skill-icon-box tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">Git & GitHub</h4>
+                <span class="skill-level-text">Version Control & Deployment</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 85%;"></div>
+            </div>
+            <p class="skill-desc">Git repositories, commit tracking, collaborative workflows, and branch management.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ENGINEERING PORTFOLIO</span>
+          <h2 class="section-title">Key Engineering & <span class="gradient-text">Research Projects</span></h2>
+          <p class="section-desc">Handcrafted projects demonstrating expertise in deep learning audio forensics, computer vision railway safety, and environmental IoT analytics.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Flagship Capstone Deepfake Audio Detection -->
+          <article class="project-card glass-panel" id="project-deepfake" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.5rem;">
+            <div class="project-media" style="height: 100%; min-height: 330px;">
+              <img src="assets/images/deepfake_audio.jpg" alt="Deepfake Audio Detection Using Room Impulse Response Analysis" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm preview-project-trigger" data-project="deepfake">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>Interactive Case Study</span>
+                </button>
+              </div>
+              <span class="project-flag" style="background: rgba(236, 72, 153, 0.2); border-color: rgba(236, 72, 153, 0.4); color: #f472b6;">🏆 Final Year Capstone Project</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-name" style="font-size: 1.35rem;">Enhancing Deepfake Audio Detection Using Room Impulse Response-Based Acoustic Analysis Compared with Conventional Speech Detection Methods</h3>
+                <span class="project-year">2026</span>
+              </div>
+              <p class="project-summary">
+                A specialized AI framework designed to overcome traditional synthetic audio detection flaws. By modeling Room Impulse Response (RIR) spatial acoustic signatures, the system exposes synthetic speech artifacts that bypass conventional frequency-domain detectors.
+              </p>
+              <div class="project-features">
+                <span class="feature-item">&bull; <strong>RIR Spatial Acoustic Analysis:</strong> Measures sound reverberation patterns unique to physical environments.</span>
+                <span class="feature-item">&bull; <strong>Superior Accuracy:</strong> Outperforms baseline MFCC and Mel-spectrogram classifiers on cloned voices.</span>
+                <span class="feature-item">&bull; <strong>Robust Defense:</strong> High sensitivity to phase distortions and synthetic acoustic inconsistencies.</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Room Impulse Response (RIR)</span>
+                <span class="tag">Audio DSP</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Librosa</span>
+                <span class="tag">SQL</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm preview-project-trigger" data-project="deepfake">
+                  <span>View Full Methodology</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <a href="https://github.com/Gowtham2449/Gowtham2449" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm project-gh-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Railway Track Crack Detection System -->
+          <article class="project-card glass-panel" id="project-railway">
+            <div class="project-media">
+              <img src="assets/images/railway_crack.jpg" alt="Railway Track Crack Detection System Preview" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm preview-project-trigger" data-project="railway">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Details</span>
+                </button>
+              </div>
+              <span class="project-flag">Computer Vision & Safety AI</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-name">Railway Track Crack Detection System</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-summary">
+                An automated computer vision and sensor inspection system that identifies micro-cracks and structural rail fissures on railway tracks in real-time, preventing derailment hazards.
+              </p>
+              <div class="project-features">
+                <span class="feature-item">&bull; Real-time AI bounding box crack detection with >94% confidence</span>
+                <span class="feature-item">&bull; Sensor telemetry integration (vibration, acoustic, thermal logs)</span>
+                <span class="feature-item">&bull; Instant automated hazard alerts with exact track kilometer tags</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">OpenCV / Deep Learning</span>
+                <span class="tag">IoT Telemetry</span>
+                <span class="tag">SQL</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm preview-project-trigger" data-project="railway">
+                  <span>Explore</span>
+                </button>
+                <a href="https://github.com/Gowtham2449/Gowtham2449" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm project-gh-btn">
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Ground Water Level Monitoring System -->
+          <article class="project-card glass-panel" id="project-groundwater">
+            <div class="project-media">
+              <img src="assets/images/groundwater.jpg" alt="Ground Water Level Monitoring System Preview" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm preview-project-trigger" data-project="groundwater">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>View Details</span>
+                </button>
+              </div>
+              <span class="project-flag">Environmental IoT & Data Analytics</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-name">Ground Water Level Monitoring System</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-summary">
+                A smart data analytics and IoT dashboard tracking real-time borehole water table depths, forecasting 30-day aquifer depletion trends, and generating low-water alert thresholds.
+              </p>
+              <div class="project-features">
+                <span class="feature-item">&bull; Real-time ultrasonic borehole depth logging & battery monitoring</span>
+                <span class="feature-item">&bull; Predictive regression model forecasting 30-day water table trends</span>
+                <span class="feature-item">&bull; Geospatial sensor map displaying active aquifer nodes</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Data Analytics</span>
+                <span class="tag">IoT Sensors</span>
+                <span class="tag">Regression ML</span>
+                <span class="tag">SQL Database</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm preview-project-trigger" data-project="groundwater">
+                  <span>Explore</span>
+                </button>
+                <a href="https://github.com/Gowtham2449/Gowtham2449" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm project-gh-btn">
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Internships Section -->
+    <section class="section certs-section" id="internships">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">INDUSTRY EXPERIENCE</span>
+          <h2 class="section-title">Internships & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-desc">Hands-on practical development experience at Greensoft Company and NoviTech.</p>
+        </div>
+
+        <div class="certs-grid">
+          
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-badge meta">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">Greensoft Company</span>
+              <h3 class="cert-title">Web Development Intern</h3>
+              <p class="cert-details">Verified Industry Internship Certificate</p>
+              <p class="cert-desc">Built interactive, responsive front-end user interfaces using modern HTML, CSS, and JavaScript. Optimized cross-device styling and assisted in modular component workflows.</p>
+              <div class="cert-skills">
+                <span class="tag-sm">HTML5</span>
+                <span class="tag-sm">CSS3</span>
+                <span class="tag-sm">JavaScript</span>
+                <span class="tag-sm">UI Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-badge aws">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">NoviTech</span>
+              <h3 class="cert-title">Full Stack Development Intern</h3>
+              <p class="cert-details">Verified Industry Internship Certificate</p>
+              <p class="cert-desc">Gained comprehensive full stack engineering experience integrating backend server logic, relational SQL database structures, and seamless dynamic frontend interfaces.</p>
+              <div class="cert-skills">
+                <span class="tag-sm">Full Stack</span>
+                <span class="tag-sm">SQL Database</span>
+                <span class="tag-sm">Python / JS</span>
+                <span class="tag-sm">Backend Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-badge hr">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">CARE College Of Engineering</span>
+              <h3 class="cert-title">B.Tech (AI & DS) Scholar</h3>
+              <p class="cert-details">CGPA: 7.81 &bull; Class of 2026</p>
+              <p class="cert-desc">Specialized in Artificial Intelligence, Data Science Lifecycles, and Audio Deepfake Forensics with strong foundational performance across all core engineering labs.</p>
+              <div class="cert-skills">
+                <span class="tag-sm">AI/ML</span>
+                <span class="tag-sm">Data Analytics</span>
+                <span class="tag-sm">Python</span>
+                <span class="tag-sm">CGPA: 7.81</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">LET'S CONNECT</span>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-desc">I am actively exploring AI/ML Engineer and Data Analyst roles. Feel free to reach out via phone, email, or LinkedIn!</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col">
+            
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="label">Phone / Mobile</span>
+                <a href="tel:+919788072449" class="val">+91 9788072449</a>
+                <span style="font-size: 0.75rem; color: #34d399; margin-top: 0.2rem;">Available for direct calls & WhatsApp</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="label">Email Address</span>
+                <a href="mailto:kgowtham1407@gmail.com" class="val" id="contact-email-link">kgowtham1407@gmail.com</a>
+                <button class="btn btn-outline btn-xs copy-email-btn" id="copy-email-btn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span id="copy-text">Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/gowtham-k-6871493b6" target="_blank" rel="noopener noreferrer" class="val">linkedin.com/in/gowtham-k-6871493b6</a>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="label">GitHub</span>
+                <a href="https://github.com/Gowtham2449/Gowtham2449" target="_blank" rel="noopener noreferrer" class="val">github.com/Gowtham2449/Gowtham2449</a>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="label">College & Location</span>
+                <span class="val">CARE College Of Engineering, Tamil Nadu, India</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-col">
+            <form class="contact-form glass-panel" id="portfolio-contact-form">
+              <h3 class="form-title">Send Me a Message</h3>
+              <p class="form-subtitle">Looking to discuss an AI/ML Engineer role, Data Analyst position, or project collaboration? Drop me a message.</p>
+
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" name="name" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">Your Email</label>
+                <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <select id="form-subject" name="subject">
+                  <option value="aiml">AI/ML Engineer Opportunity</option>
+                  <option value="analytics">Data Analyst Opportunity</option>
+                  <option value="project">Project Collaboration</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Hi Gowtham, I reviewed your portfolio and would love to discuss an AI/ML / Data Analyst opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full submit-btn" id="submit-contact-btn">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-icon">&lt;GK/&gt;</span>
+          <span class="logo-text">Gowtham<span class="gradient-text">.ai</span></span>
+        </a>
+        <p class="footer-copy">Gowtham K &bull; AI/ML Engineer &bull; Data Analyst &bull; B.Tech (AI & DS) with 7.81 CGPA at CARE College Of Engineering.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#internships">Internships</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gowtham K. Phone: +91 9788072449 &bull; Email: kgowtham1407@gmail.com</p>
+        <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Interactive Project Preview Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog glass-panel" id="modal-project-dialog">
+      <button class="modal-close-btn" id="close-project-modal" aria-label="Close dialog">&times;</button>
+      
+      <div class="modal-body" id="modal-project-content">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Resume Preview & Printable Modal -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-lg glass-panel resume-modal-dialog">
+      <div class="modal-header-actions">
+        <div class="resume-badge-group">
+          <span class="resume-tag">B.Tech (AI & DS) &bull; CGPA: 7.81</span>
+          <span class="resume-updated">Updated October 2026</span>
+        </div>
+        <div class="modal-btn-cluster">
+          <a href="https://drive.google.com/file/d/13wb3r4-I0Joc9GC5KEAwquSjTatTlAp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Open Google Drive Resume</span>
+          </a>
+          <button class="btn btn-primary btn-sm" id="print-resume-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="close-resume-modal" aria-label="Close resume">&times;</button>
+        </div>
+      </div>
+
+      <!-- Printable Clean Resume Document -->
+      <div class="resume-paper" id="resume-document">
+        
+        <!-- Resume Header -->
+        <header class="resume-doc-header">
+          <h1 class="resume-doc-name">GOWTHAM K</h1>
+          <p class="resume-doc-sub">AI/ML Engineer &bull; Data Analyst &bull; B.Tech (Artificial Intelligence & Data Science)</p>
+          <div class="resume-contact-line">
+            <span>kgowtham1407@gmail.com</span> &bull;
+            <span>+91 9788072449</span> &bull;
+            <span>CARE College Of Engineering, Tamil Nadu</span> &bull;
+            <a href="https://www.linkedin.com/in/gowtham-k-6871493b6">LinkedIn</a> &bull;
+            <a href="https://github.com/Gowtham2449/Gowtham2449">GitHub</a> &bull;
+            <a href="https://drive.google.com/file/d/13wb3r4-I0Joc9GC5KEAwquSjTatTlAp6/view?usp=drive_link">Drive Resume</a>
+          </div>
+        </header>
+
+        <!-- Resume Section: Education -->
+        <section class="resume-sec">
+          <h2 class="resume-sec-title">EDUCATION</h2>
+          <div class="resume-sec-content">
+            <div class="resume-row">
+              <div class="resume-col-left">
+                <strong>CARE College Of Engineering</strong>
+                <div class="resume-italic">Bachelor of Technology in Artificial Intelligence & Data Science (B.Tech AI & DS)</div>
+              </div>
+              <div class="resume-col-right text-right">
+                <span>Tamil Nadu, India</span><br>
+                <span>Final Year &bull; <strong>CGPA: 7.81 / 10</strong></span>
+              </div>
+            </div>
+            <div class="resume-bullets">
+              <p>&bull; <strong>Coursework:</strong> Artificial Intelligence, Machine Learning, Data Analytics, Speech & Audio Signal Processing, Database Management Systems (SQL), Computer Vision, Python Programming, Web Technologies.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Resume Section: Industry Internships -->
+        <section class="resume-sec">
+          <h2 class="resume-sec-title">INTERNSHIPS & EXPERIENCE</h2>
+          
+          <div class="resume-exp-item">
+            <div class="resume-row">
+              <div class="resume-col-left">
+                <strong>Full Stack Development Intern</strong> — NoviTech
+              </div>
+              <div class="resume-col-right text-right">
+                <span>Internship Certificate</span>
+              </div>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Collaborated on full-stack application development, connecting server-side logic with relational SQL database queries.</li>
+              <li>Engineered dynamic responsive user interface modules with clean styling and tested cross-browser compatibility.</li>
+            </ul>
+          </div>
+
+          <div class="resume-exp-item">
+            <div class="resume-row">
+              <div class="resume-col-left">
+                <strong>Web Development Intern</strong> — Greensoft Company
+              </div>
+              <div class="resume-col-right text-right">
+                <span>Internship Certificate</span>
+              </div>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Developed and tested modern web page components utilizing semantic HTML5, CSS3, and JavaScript.</li>
+              <li>Optimized responsive mobile layouts and structured clean frontend workflows.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Resume Section: Technical Skills -->
+        <section class="resume-sec">
+          <h2 class="resume-sec-title">TECHNICAL SKILLS</h2>
+          <div class="resume-skills-block">
+            <p><strong>Programming & AI/ML:</strong> Python (NumPy, Pandas, Matplotlib, Scikit-learn, Librosa, OpenCV), Machine Learning, Speech & Audio DSP</p>
+            <p><strong>Databases & Analytics:</strong> SQL, Relational Database Normalization, MySQL, Data Analytics & Visualization</p>
+            <p><strong>Frontend Development:</strong> HTML5, CSS3, JavaScript (ES6+), Responsive Web Design, DOM Manipulation</p>
+            <p><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook</p>
+          </div>
+        </section>
+
+        <!-- Resume Section: Engineering Projects -->
+        <section class="resume-sec">
+          <h2 class="resume-sec-title">KEY ENGINEERING PROJECTS</h2>
+          
+          <div class="resume-project-item">
+            <div class="resume-row">
+              <div class="resume-col-left">
+                <strong>Enhancing Deepfake Audio Detection Using Room Impulse Response-Based Acoustic Analysis</strong>
+              </div>
+              <div class="resume-col-right text-right">
+                <span>Final Year Capstone Research</span>
+              </div>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Engineered a spatial acoustic deepfake detection framework analyzing Room Impulse Response (RIR) reverberation patterns to identify synthetic cloned speech.</li>
+              <li>Outperformed conventional Mel-spectrogram & MFCC baselines with higher resilience against generative voice cloning.</li>
+            </ul>
+          </div>
+
+          <div class="resume-project-item">
+            <div class="resume-row">
+              <div class="resume-col-left">
+                <strong>Railway Track Crack Detection System</strong> | <em>Python, Computer Vision, OpenCV, IoT Sensors</em>
+              </div>
+              <div class="resume-col-right text-right">
+                <span>AI & Safety System</span>
+              </div>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Designed an automated vision-based rail crack inspection pipeline detecting track fissures in real-time with >94% confidence.</li>
+              <li>Incorporated sensor telemetry data streams (vibration, acoustic, thermal) to transmit instant location alerts.</li>
+            </ul>
+          </div>
+
+          <div class="resume-project-item">
+            <div class="resume-row">
+              <div class="resume-col-left">
+                <strong>Ground Water Level Monitoring System</strong> | <em>Python, IoT Sensors, Data Analytics, SQL</em>
+              </div>
+              <div class="resume-col-right text-right">
+                <span>Environmental IoT Platform</span>
+              </div>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Built an IoT-enabled environmental monitoring system logging real-time borehole water table depths.</li>
+              <li>Developed predictive regression analytics forecasting 30-day aquifer depletion trends and low-water alerts.</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
